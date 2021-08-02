@@ -1,0 +1,19 @@
+NAME Average
+PAGE 52,80 
+TITLE 8086 ALP to find average of two numbers 
+.model small 
+.stack 100 
+.data 
+  No1  DB 63H
+  No2  DB 2EH 
+Avg        DB ? 
+.code 
+START: MOV AX,@data 
+MOV DS,AX
+MOV AL,NO1
+ADD AL,NO2
+ADC AL,00H 
+SAR AX,1
+MOV Avg,AL 
+END START
+
